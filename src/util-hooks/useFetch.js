@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useFetch = (options) => {
   const [data, setData] = useState(null);
+  const [favoriteCards, setFavoriteCards] = useState([]);
 
   useEffect(() => {
     fetch(options.url)
@@ -13,5 +14,6 @@ export const useFetch = (options) => {
 
   return {
     data,
+    favoriteCards,
   };
 };
